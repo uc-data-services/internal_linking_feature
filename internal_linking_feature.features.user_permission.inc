@@ -20,7 +20,9 @@ function internal_linking_feature_user_default_permissions() {
   $permissions['access ckeditor link'] = array(
     'name' => 'access ckeditor link',
     'roles' => array(
-      '0' => 'authenticated user',
+      '0' => 'admin',
+      '1' => 'authenticated user',
+      '2' => 'editor',
     ),
   );
 

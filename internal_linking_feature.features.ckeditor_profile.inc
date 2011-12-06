@@ -10,7 +10,7 @@ function internal_linking_feature_ckeditor_profile_defaults() {
       'settings' => array(
         'allow_user_conf' => 'f',
         'filters' => array(
-          'ckeditor_link/0' => 0,
+          'ckeditor_link/0' => 1,
           'glossary/0' => 0,
           'filter/3' => 0,
           'filter/0' => 1,
@@ -40,7 +40,7 @@ function internal_linking_feature_ckeditor_profile_defaults() {
     [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Subscript\',\'Superscript\'],
     [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\'],
     [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'BidiRtl\',\'BidiLtr\'],
-    [\'Link\',\'Unlink\',\'Anchor\'],
+    [\'Link\',\'Unlink\',\'Anchor\',\'Linkit\',\'LinkToNode\',\'LinkToMenu\'],
     [\'DrupalBreak\',\'DrupalPageBreak\']
 ]',
         'expand' => 't',
@@ -82,7 +82,19 @@ function internal_linking_feature_ckeditor_profile_defaults() {
           'ckeditor_link' => array(
             'name' => 'drupal_path',
             'desc' => 'CKEditor Link - A plugin to easily create links to Drupal internal paths',
-            'path' => '%base_path%sites/all/modules/ckeditor_link/plugins/link/',
+            'path' => '%base_path%sites/drupal6.lib.berkeley.edu.asktico/modules/ckeditor_link/plugins/link/',
+          ),
+          'drupalbreaks' => array(
+            'name' => 'drupalbreaks',
+            'desc' => 'Plugin for inserting Drupal teaser and page breaks.',
+            'path' => '%base_path%%plugin_dir%drupalbreaks/',
+            'buttons' => array(
+              'DrupalBreak' => array(
+                'label' => 'DrupalBreak',
+                'icon' => 'images/drupalbreak.png',
+              ),
+            ),
+            'default' => 't',
           ),
           'tableresize' => array(
             'name' => 'tableresize',
@@ -97,8 +109,6 @@ function internal_linking_feature_ckeditor_profile_defaults() {
       ),
       'roles' => array(
         'authenticated user' => 'authenticated user',
-        'admin' => 'admin',
-        'editor' => 'editor',
       ),
     ),
   );
