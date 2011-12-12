@@ -18,6 +18,7 @@ features[variable][] = "ckeditor_link_autocomplete_node_types"
 features[variable][] = "ckeditor_link_autocomplete_vocabularies"
 features[variable][] = "ckeditor_link_type_name"
 features[variable][] = "ckeditor_link_type_selected"
+project status url = http://doemo.lib.berkeley.edu/drupalfeatures/fserver
 name = "Internal Linking Feature"
 package = "Features"
 project = "internal_linking_feature"
