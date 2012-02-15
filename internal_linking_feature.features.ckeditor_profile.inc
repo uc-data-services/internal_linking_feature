@@ -93,8 +93,12 @@ function internal_linking_feature_ckeditor_profile_defaults() {
                 'label' => 'DrupalBreak',
                 'icon' => 'images/drupalbreak.png',
               ),
+              'DrupalPageBreak' => array(
+                'label' => 'DrupalPageBreak',
+                'icon' => 'images/drupalpagebreak.png',
+              ),
             ),
-            'default' => 't',
+            'default' => 'f',
           ),
           'tableresize' => array(
             'name' => 'tableresize',
@@ -109,6 +113,8 @@ function internal_linking_feature_ckeditor_profile_defaults() {
       ),
       'roles' => array(
         'authenticated user' => 'authenticated user',
+        'admin' => 'admin',
+        'editor' => 'editor',
       ),
     ),
   );
